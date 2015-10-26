@@ -81,10 +81,32 @@ Player.prototype.render = function(){
          this.y += generalSpeed}
         }
 };
+                ///// STAR SPECS 
+var Star = function(){
+    this.sprite = "images/Star.png";
+    this.x = Math.floor( ( Math.random() * 404 ) + 1 );
+    this.y = Math.floor( ( Math.random() * 4 ) + 1 ) * 83;
 
-                ///// RENDERING ENEMYS & PLAYER 
+};
+
+Star.prototype.render = function(){
+    ctx.drawImage( Resources.get( this.sprite ), this.x, this.y );
+};
+
+Star.prototype.reset = function(){
+    if( player.x < star.x + 60 && 
+    player.x + 60 > star.x && 
+    player.y < star.y + 85 && 
+    player.y + 50 > star.y ){
+        this.x = Math.floor( ( Math.random() * 404 ) + 1 );
+        this.y = Math.floor( ( Math.random() * 4 ) + 1 ) * 83;
+    }
+    
+};
+                ///// RENDERING ENEMYS, PLAYER & STAR
 var allEnemies = [new Enemy(-300,60,175), new Enemy(-100,140,300), new Enemy(-100,220,150), new Enemy(-300,300,250), new Enemy(-100,220,200)];
 var player = new Player(200,400);
+var star = new Star();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.

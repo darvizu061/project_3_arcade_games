@@ -5,5 +5,7 @@ body {
 .title {
     font-family: 'Bree Serif', serif;
     color: rgb(230, 184, 0);
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 

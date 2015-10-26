@@ -58,6 +58,11 @@ Player.prototype.update = function(){
     } else if (this.y > 440){
         this.y = 440;
     }
+    //resets player to init location when it reaches the water
+    if (this.y < 0){
+        this.x = 200;
+        this.y = 400;
+    }
 }; 
 
 Player.prototype.render = function(){

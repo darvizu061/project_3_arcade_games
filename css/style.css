@@ -1,5 +1,9 @@
 body {
     text-align: center;
-    /*background: black;*/
+    background: black;
+}
+.title {
+    font-family: 'Bree Serif', serif;
+    color: rgb(230, 184, 0);
 }
 

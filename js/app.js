@@ -34,6 +34,7 @@ var Player = function(x,y,speed) {
     this.sprite = 'images/char-boy.png';
     this.x = x;
     this.y = y;
+    this.score = 0;
 };
 
 
@@ -100,6 +101,9 @@ Star.prototype.reset = function(){
     player.y + 50 > star.y ){
         this.x = Math.floor( ( Math.random() * 404 ) + 1 );
         this.y = Math.floor( ( Math.random() * 4 ) + 1 ) * 83;
+        player.score+= 100;
+        // update the score on the page
+        document.getElementById("scoreKeeper").innerHTML = player.score;
     }
     
 };

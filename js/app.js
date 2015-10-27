@@ -59,10 +59,12 @@ Player.prototype.update = function(){
     } else if (this.y > 440){
         this.y = 440;
     }
-    //resets player to init location when it reaches the water
+    //resets player to init location when it reaches the water and gives score to player 
     if (this.y < 0){
         this.x = 200;
         this.y = 400;
+        this.score += 150;
+        document.getElementById("scoreKeeper").innerHTML = player.score;
     }
 }; 
 
@@ -70,7 +72,7 @@ Player.prototype.render = function(){
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   
   player.handleInput = function (keyCode){
-      var generalSpeed = 20;
+      var generalSpeed = 25;
       
       if(keyCode == 'left')
         { this.x -= generalSpeed}
@@ -101,7 +103,7 @@ Star.prototype.reset = function(){
     player.y + 50 > star.y ){
         this.x = Math.floor( ( Math.random() * 404 ) + 1 );
         this.y = Math.floor( ( Math.random() * 4 ) + 1 ) * 83;
-        player.score+= 100;
+        player.score+= 90;
         // update the score on the page
         document.getElementById("scoreKeeper").innerHTML = player.score;
     }

@@ -94,9 +94,9 @@ Star.prototype.render = function(){
 };
 
 Star.prototype.reset = function(){
-    if( player.x < star.x + 60 && 
-    player.x + 60 > star.x && 
-    player.y < star.y + 85 && 
+    if( player.x < star.x + 50 && 
+    player.x + 50 > star.x && 
+    player.y < star.y + 50 && 
     player.y + 50 > star.y ){
         this.x = Math.floor( ( Math.random() * 404 ) + 1 );
         this.y = Math.floor( ( Math.random() * 4 ) + 1 ) * 83;

@@ -39,7 +39,7 @@ var Player = function(x,y,speed) {
 
 
 Player.prototype.update = function(){
-    //Would restart player's x & y position when in collision
+    //Would restart player's x & y position when in collision & reduct points 
     for (var i = 0; i < allEnemies.length; i++) {
         if((allEnemies[i].x) <= player.x + 40 &&
             (allEnemies[i].x + 40) >= (player.x) &&
@@ -47,6 +47,8 @@ Player.prototype.update = function(){
             (allEnemies[i].y + 40) >= (player.y)){
                 this.x = 200;
                 this.y = 400; 
+                this.score -= 150;
+                document.getElementById("scoreKeeper").innerHTML = player.score;
             }
     }
     //keeps player inside the canvas at all times 

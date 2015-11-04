@@ -1,6 +1,6 @@
 # Danny Arvizu's arcade game project for Udacity's front end nanodegree program. #
 
-==============================
+===============================
 
 ## INSTALLATION ##
 -------------------------------
@@ -24,6 +24,6 @@
 
 ## LICENSE ##
 -------------------------------
-project_3_arcade_games is a public repository for the open public. Feel free to use. 
+project_3_arcade_games is a repository for the open public. Feel free to use. 
         
         

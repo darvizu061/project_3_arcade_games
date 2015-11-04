@@ -42,10 +42,10 @@ var Player = function(x,y,speed) {
 Player.prototype.update = function(){
     //Would restart player's x & y position when in collision & reduct points 
     for (var i = 0, l = allEnemies.length; i < l; i++) {
-        if((allEnemies[i].x) <= player.x + 40 &&
-            (allEnemies[i].x + 40) >= (player.x) &&
-            (allEnemies[i].y)<= player.y + 40 &&
-            (allEnemies[i].y + 40) >= (player.y)){
+        if((allEnemies[i].x) <= this.x + 40 &&
+            (allEnemies[i].x + 40) >= (this.x) &&
+            (allEnemies[i].y)<= this.y + 40 &&
+            (allEnemies[i].y + 40) >= (this.y)){
                 this.x = 200;
                 this.y = 400; 
                 this.score -= 150;

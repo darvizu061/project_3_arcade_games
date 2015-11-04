@@ -1,3 +1,4 @@
+"use strict";
                         ///// ENEMY SPECS
 var Enemy = function(x,y,speed) {
     
@@ -40,7 +41,7 @@ var Player = function(x,y,speed) {
 
 Player.prototype.update = function(){
     //Would restart player's x & y position when in collision & reduct points 
-    for (var i = 0; i < allEnemies.length; i++) {
+    for (var i = 0, l = allEnemies.length; i < l; i++) {
         if((allEnemies[i].x) <= player.x + 40 &&
             (allEnemies[i].x + 40) >= (player.x) &&
             (allEnemies[i].y)<= player.y + 40 &&
